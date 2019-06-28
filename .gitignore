@@ -1,0 +1,16 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/UserInterfaceTesting.Framework.BarbaryLion/v16/Server/sqlite3/db.lock
+/.vs
+/UserInterfaceTesting.Framework.BarbaryLion/bin/Debug/netcoreapp2.1
+/UserInterfaceTesting.Framework.BarbaryLion/obj
+/UserInterfaceTestingResources/bin/Debug/netstandard2.0
+/UserInterfaceTestingResources/obj/Debug/netstandard2.0
+/UserInterfaceTestingResources/obj/Release/netstandard2.0
+/UserInterfaceTestingResources/obj/project.assets.json
+/UserInterfaceTestingResources/obj/UserInterfaceTestingResources.csproj.nuget.cache
+/UserInterfaceTestingResources/obj/UserInterfaceTestingResources.csproj.nuget.g.props
+/UserInterfaceTestingResources/obj/UserInterfaceTestingResources.csproj.nuget.g.targets
+/UserInterfaceTestingResources/obj/UserInterfaceTestingResources.csproj.nuget.dgspec.json
