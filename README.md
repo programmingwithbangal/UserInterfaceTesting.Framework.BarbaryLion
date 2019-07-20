@@ -33,3 +33,8 @@ Microsoft Visual Studio IDE is used to develop this Framework.
 ### Run Tests
 * Test => Windows => Test Explorer => Run All
 <img src ="UserInterfaceTesting.Framework.BarbaryLion/Images/testexplorer.png" width=500>
+
+### Run Tests with Command Prompt/Windows PowerShell
+* Open Folder in File Explorer: ..\UserInterfaceTesting.Framework.BarbaryLion\bin\Debug\netcoreapp2.1
+* Open Command Prompt/Windows PowerShell
+* Run "dotnet vstest UserInterfaceTesting.Framework.BarbaryLion.dll"
