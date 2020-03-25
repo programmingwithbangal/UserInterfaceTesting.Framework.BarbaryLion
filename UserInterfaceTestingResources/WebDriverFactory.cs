@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
@@ -25,11 +26,24 @@ namespace UserInterfaceTestingResources
 
         private IWebDriver GetChromeDriver()
         {
-            var outPutDirectory = GetAssemblysOutputDirectory();
-            return new ChromeDriver(outPutDirectory);
+            var chromeOptions = new ChromeOptions();
+            chromeOptions.AddArguments(new List<string>()
+            {
+                "--silent-launch",
+                "--no-startup-window",
+                "no-sandbox",
+                "headless"
+            });
+
+            var driverPath = GetDriverPath();
+
+            var chromeDriverService = ChromeDriverService.CreateDefaultService(driverPath);
+            chromeDriverService.HideCommandPromptWindow = true;
+
+            return new ChromeDriver(chromeDriverService, chromeOptions);
         }
 
-        private static string GetAssemblysOutputDirectory()
+        private static string GetDriverPath()
         {
             return Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
         }
